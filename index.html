@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="css/swiper.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>One Page Portfolio</title>
+
+  <title>文字置中</title>
+  <style>
+    .center-text {
+      text-align: center;
+    }
+  </style>
+
+  <style>
+    body {
+      background: url('sky.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+
+  <title>跳轉至相應區域</title>
+  <style>
+    body {
+      background: url('sky.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('hero-bg.png');
+      /* 新增部分 */
+      background-size: cover;
+      /* 背景圖片覆蓋整個視窗 */
+      background-position: center;
+      /* 背景圖片置中 */
+      background-repeat: no-repeat;
+      /* 背景圖片不重複 */
+    }
+
+    .section {
+      padding: 20px;
+      margin: 20px;
+      background-color: #f0f0f000;
+    }
+
+    .menu {
+      list-style-type: none;
+      padding: 0;
+      display: none;
+      /* Hide menu by default */
+      background-color: white;
+      position: absolute;
+      top: 5px;
+      /* Adjust according to your layout */
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      /* 修改部分 */
+      top: 48px;
+      /* 修改部分 */
+      right: 3px;
+      /* 修改部分 */
+    }
+
+    .menu li {
+      margin-bottom: 10px;
+      padding: 10px 20px;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .menu li a:hover {
+      color: rgb(255, 0, 230);
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuIcon = document.querySelector('.menu-icon');
+      var menu = document.querySelector('.menu');
+
+      menuIcon.addEventListener('click', function () {
+        if (menu.style.display === 'block') {
+          menu.style.display = 'none';
+        } else {
+          menu.style.display = 'block';
+        }
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!menuIcon.contains(event.target) && !menu.contains(event.target)) {
+          menu.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+  <title>Change to White</title>
+  <style>
+    .highlight {
+      color: rgb(9, 9, 9);
+      background-color: rgb(255, 255, 255);
+      border: 0px solid #ccc;
+      padding: 10px;
+      border-radius: 10%;
+      white-space: nowrap;
+    }
+
+    .highlightPink {
+      color: #ff00a2;
+      background-color: rgba(255, 255, 255, 0);
+      border: 0px solid #ccc;
+      padding: 0px;
+      border-radius: 0%;
+      white-space: break-word;
+    }
+
+    .highlightBlue {
+      color: #0798ff;
+      background-color: rgba(255, 255, 255, 0);
+      border: 0px solid #ccc;
+      padding: 0px;
+      border-radius: 0%;
+      white-space: break-word;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: rgba(255, 0, 0, 0);
+      margin-top: -170px;
+    }
+  </style>
+
+  <title>Mouse Over Example</title>
+  <style>
+    .CiconEX {
+      opacity: 0;
+      position: absolute;
+      color: white;
+      background-color: rgba(255, 255, 255, 0);
+      border: 0px solid #ccc;
+      padding: 5px;
+      transition: opacity 0.8s ease-in-out;
+      white-space: nowrap;
+    }
+
+    .CiconEX::after {
+      content: '▼';
+      position: absolute;
+      top: 5px;
+      /* Adjust this value to position the arrow */
+      left: 20%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      /* Adjust size of the arrow */
+    }
+
+
+    .Cicon1 {
+      position: relative;
+      display: inline-block;
+    }
+
+    .Cicon1:hover .CiconEX {
+      opacity: 1;
+    }
+  </style>
+
+  <title>About Me</title>
+  <style>
+    body {
+      background: url('sky.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff00;
+    }
+
+    .containerHome {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(181, 220, 250, 0);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgb(181, 220, 250);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.202);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+
+    .profile-pic {
+      float: left;
+      /* 變更 */
+      margin-right: 5%;
+      margin-left: 5%;
+      margin-top: 2%;
+      margin-bottom: 5%;
+      /* 變更 */
+      display: block;
+      margin: 10 auto 20px;
+      width: 220px;
+      /* 調整圖片寬度 */
+      height: 220px;
+      /* 調整圖片高度 */
+      border-radius: 35%;
+      object-fit: cover;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      overflow: hidden;
+      /* 變更 */
+    }
+
+    .section h2 {
+      color: #075e9c;
+      border-bottom: 2px solid #075e9c;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      float: left;
+      /* 變更 */
+      width: calc(100% - 100px);
+      /* 變更 */
+    }
+
+    .experience {
+      clear: both;
+      /* 變更 */
+    }
+
+    .experience {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .info p,
+    .experience p {
+      flex: 1 1 45%;
+      margin: 10px 0;
+    }
+
+    .experience h3 {
+      color: #333;
+      margin: 10px 0 5px;
+    }
+
+    .experience p {
+      flex: 1 1 100%;
+    }
+
+    @media (max-width: 600px) {
+
+      .info p,
+      .experience p {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var icon = document.querySelector('.Cicon1 img');
+      var info = document.querySelector('.CiconEX');
+
+      icon.addEventListener('mouseover', function () {
+        info.style.display = 'block';
+      });
+
+      icon.addEventListener('mouseout', function () {
+        info.style.display = 'none';
+      });
+    });
+  </script>
+
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,400,700"
+    rel="stylesheet">
+
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+
+  <!-- 加入背景圖片 -->
+  <style>
+    body {
+      background-image: url('hero-bg.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+
+  <header class="hero">
+    <div class="containerHome">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-6 col-xs-12">
+          <nav>
+            <div id="menu-toggle">
+              <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+              <div class="cross">
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <ul class="main-nav" id="mainMenu">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#AboutMe">About Me</a></li>
+              <li><a href="#Skills">Skills</a></li>
+              <li><a href="#Projects">Projects</a></li>
+              <li><a href="#Extracurricular">Extracurricular</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="menu-icon"><img src="assets/menu.png"></a>
+
+          <ul class="menu">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#AboutMe">About Me</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Extracurricular">Extracurricular</a></li>
+            <li><a href="#ContactMe">Contact Me</a></li>
+          </ul>
+
+          <div class="hero-text">
+            <div class="" id="Home">
+              <h1><span>Hi, I am</span><br>Hsin-Yi Tsai (Jaz).</h1>
+              <h3>Nice To Meet You!</h3>
+              <a href="#AboutMe" class="btn btn-lg btn-primary">Know More</a>
+              <ul class="social-links">
+                <li class="label">Contact for more</li>
+                <li><a href="mailto:jasmine921030@gmail.com"><img src="assets/email.png" alt="電子郵件"></a></li>
+                <li><a href="https://line.me/ti/p/9P0Lex_9Pi"><img src="assets/line.png" alt="Line QR code"></a></li>
+                <li class="Cicon1">
+                  <a title="連絡電話"><img src="assets/phone.png" alt="連絡電話"></a>
+                  <div class="CiconEX">
+                    <p> <br>0988-893-660</p>
+                  </div>
+                </li>
+                <li><a href="https://github.com/lemonkat2003/jaztsai92.github.io.git" alt="Github 連結"><img
+                      src="assets/github.png"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="box"></div>
+    <div class="section" id="AboutMe"></div>
+    <h1 class="heading purple"><span class="highlightBlue">About Me</h1>
+  </div>
+  <div class="containerHome">
+    <img src="assets/photo.jpg" alt="個人照片" class="profile-pic">
+
+    <div class="section">
+      <br>
+      <p><strong> ►</strong>Hsin-Yi Tsai (Jaz)</p>
+      <p><strong> ►</strong>10/30/2003</p>
+      <p><strong> ►</strong>B.B.A. in Information Management, National Taiwan University (Sep. 2022 - Present)</p>
+      <p><strong> ►</strong>King's Undergraduate Summer Exchange - Business & Management Course (Jul. 2023)</p>
+      <p><strong> ►</strong><span class="highlightBlue">Website Design, UI/UX Design, Consumer Behavior Analysis, Data
+          Analysis, Content Marketing,
+          Inbound Marketing, Translation</span></p>
+    </div>
+  </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section" id="Skills"></div>
+    <div class="box"></div>
+    <h1 class="heading purple"><span class="highlightBlue">Skills</h1>
+  </div>
+  <div class="section">
+    <div class="box"></div>
+  </div>
+  <section class="stats">
+    <div class="row">
+      <div class="box"></div>
+      <h3>
+        <p class="center-text">Professional Tools</p>
+      </h3>
+      <h2 class="purple"><span class="counter">
+          <p class="center-text">HTML<br>C++<br>Python<br>Illustrator<br>Photoshop<br>Excel(VBA)<br>Tableau</p>
+        </span>
+      </h2>
+      <br>
+      <br>
+      <h3>
+        <p class="center-text">Language</p>
+      </h3>
+      <h2 class="blue counter">
+        <p class="center-text">English<br>Chinese<br>Taiwanese</p>
+      </h2>
+    </div>
+    </div>
+  </section>
+  </div>
+  </div>
+
+
+  </div>
+  <div class="box"></div>
+  <section class="testimonial">
+    <div class="section" id="Projects"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="heading purple"><span class="highlightBlue">Projects</h1>
+        </div>
+      </div>
+    </div>
+    <div class="box"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Swiper -->
+          <div class="swiper-container project-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonial-box yellow">
+                <h2>WhereTo? A Startup Business Pitch that would revolutionize Travel Industry</h2>
+                <p><strong> ► </strong>First in class (pr99) in KCL’s Business & Management Course</p>
+                <p><strong> ► </strong>Developed a full business plan for an immersive traveling app ‘WhereTo?’.</p>
+                <p><strong> ► </strong>Includes strategy canvas, operation plan, market problem analysis, hiring plan,
+                  profit projection, and growth strategies.</p>
+                <p><strong> ► </strong>Developed detailed understanding in travelling and gaming market,
+                  entrepreneurship
+                  and internal
+                  operational processes of a business.</p>
+                <div class="text-right">
+                  <p class="name">- Group Leader</p>
+                </div>
+                <br>
+                <p class="text-left"><a href="https://drive.google.com/file/d/1SDIZqrAZQRSJepBBMzuZ4L6Y-BQcVOA4/view"
+                    class="btn btn-lg btn-primary">Know More &#8594</span></a>
+                </p>
+              </div>
+              <div class="swiper-slide testimonial-box pink">
+                <h2>Consumer Behavior Final Report - Philodendron 'Pink Lady' Hybrid Aroid at Seeds Greenhouse</h2>
+                <p><strong> ► </strong>pr99 in NTU’s Consumer Behavior course. </p>
+                <p><strong> ► </strong>Conducted analysis on brand management, focusing on website optimization and SEO
+                  recommendation for
+                  Seeds Greenhouse to enhance sales performance, open up business opportunities, and build loyal
+                  customer base.</p>
+                <p><strong> ► </strong>Built demo website as reference for Seed Greenhouse to work on future
+                  optimization.</p>
+                <p><strong> ► </strong>Developed detailed understanding in gardening market and Taiwan's domestic
+                  industries.</p>
+                <div class="text-right">
+                  <p class="name">- Group Leader</p>
+                </div>
+                <br>
+                <p class="text-left"><a href="https://drive.google.com/file/d/11URlnaNF83MOmBWdDI3KFU7jm6KSuv7l/view"
+                    class="btn btn-lg btn-primary">Know More &#8594;</a>
+                </p>
+              </div>
+              <div class="swiper-slide testimonial-box blue">
+                <h2>traVeleR: A VR Travelling App Proposal</h2>
+                <p><strong> ► </strong>A game that provides immerse VR experience of various culture.</p>
+                <p><strong> ► </strong>Players can complete tasks while doing virtual siteseeing and earn
+                  cryptocurrencies (such as Ether) as reward. They can also earn coupons of certain hotels and
+                  resturants cooperating with traVeleR.</p>
+                <p><strong> ► </strong>Promotion schemes include inviting Youtuber game livestreamers for colaberation,
+                  cooperation with governments, and advertising for restaurants and hotels for immerse experience and
+                  pre-toor of the content. </p>
+                <div class="text-right">
+                  <p class="name">- Group Leader</p>
+                </div>
+                <br>
+                <p class="text-left"><a
+                    href="https://drive.google.com/file/d/1Z56hSAqN3ETsc81_pwBnkyjfo5uuN9cd/view?usp=share_link"
+                    class="btn btn-lg btn-primary">Know More &#8594;</a>
+                </p>
+              </div>
+              <div class="swiper-slide testimonial-box yellow">
+                <h2>”CHIC” Online Apparel Sales Development Plan</h2>
+                <p><strong> ► </strong>Full mark (pr99) in NTU’s IM Freshman Project course. </p>
+                <p><strong> ► </strong>Developed a business plan for an online apparel brand ‘CHIC’. </p>
+                <p><strong> ► </strong>Includes customer segmentation, sales channel setup, cost structure setting and
+                  profit goals, marketing activities, competitor strengths & weaknesses analysis, and performance
+                  forecasting and stop-loss point.</p>
+                <p><strong> ► </strong>Developed detailed understanding in apparel market, entrepreneurship and internal
+                  operational processes of a business.</p>
+                <div class="text-right">
+                  <p class="name">- Group Leader</p>
+                </div>
+                <br>
+                <p class="text-left"><a href="https://drive.google.com/file/d/1H-4itHA4W4au17x4YowAKoaireLv1w2R/view"
+                    class="btn btn-lg btn-primary">Know More &#8594;</a>
+                </p>
+              </div>
+              <div class="swiper-slide testimonial-box pink">
+                <h2>Simple Mart: A Comprehensive Analysis of Its Franchising Management</h2>
+                <p><strong> ► </strong>pr99 in NTU’s Management course. </p>
+                <p><strong> ► </strong>Conducted analysis on different franchising models, corporate communication, and
+                  brand management. </p>
+                <p><strong> ► </strong>Provided management strategies for Simple Mart to enhance brand competitiveness.
+                </p>
+                <div class="text-right">
+                  <p class="name">- Group Leader</p>
+                </div>
+                <br>
+                <p class="text-left"><a href="https://drive.google.com/file/d/1TTTmLoY8kJp5rmVZ2UsSZg1e-HS6IEZs/view"
+                    class="btn btn-lg btn-primary">Know More &#8594;</a>
+                </p>
+              </div>
+              <div class="swiper-slide testimonial-box blue">
+                <h2>Infosys: The Rising Future For Metaverse</h2>
+                <p><strong> ► </strong>A comprehensive analysis of Infosys.</p>
+                <p><strong> ► </strong>Conducted analysis on the short-term and long-term market dynamics of Infosys.
+                </p>
+                <p><strong> ► </strong>Developed investment thesis and analyize the risk factors and mitigating factors
+                  of investing in Infosys.
+                </p>
+                <div class="text-right">
+                  <p class="name">- Member</p>
+                </div>
+                <br>
+                <p class="text-left"><a
+                    href="https://drive.google.com/file/d/141wig34AAl4MMCFmPgLn_KdGBY8UwOGh/view?usp=share_link"
+                    class="btn btn-lg btn-primary">Know More &#8594;</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next project-next"></div>
+          <div class="swiper-button-prev project-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="box"></div>
+  <section class="case-study">
+    <div class="section" id="Extracurricular"></div>
+    <div class="containerHome">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="heading purple"><span class="highlightBlue">Extracurricular</h1>
+          <!-- Swiper -->
+          <div class="swiper-container extracurricular-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide client-box"></div>
+              <div class="swiper-slide client-box">
+                <img src="assets/orientation.jpg" class="client-logo">
+                <h4 class="text-left title"><span class="highlightBlue">Vise President & Financial Minister</span><br>
+                  during IM Summer Orientation</h4>
+                <p class="text-left tag">Nov. 2022 - Aug. 2023</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <img src="assets/pdao.png" class="client-logo">
+                <h4 class="text-left title"><span class="highlightBlue">Head of Public Relations</span><br> during 2024
+                  PDAO competition</h4>
+                <p class="text-left tag">Jan. 2024 - Jun. 2024</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <img src="assets/MTS.png" class="client-logo">
+                <h4 class="text-left title"><span class="highlightBlue">2023 Oxford Map the System Competition</span>
+                </h4>
+                <p class="text-left tag">2nd place in Taiwan Regional Contest</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <img src="assets/CoM.png" class="client-logo">
+                <h4 class="text-left title"><span class="highlightBlue">2023 NTU CoM Business Case Competition</span>
+                </h4>
+                <p class="text-left tag">Group Leader</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <h4 class="text-left title"><span class="highlightBlue">Teacher’s assistant</span><br> of Introduction
+                  to Business Analytics</h4>
+                <p class="text-left tag">Feb. 2023 - Jun. 2023</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <h4 class="text-left title"><span class="highlightBlue">Teacher’s assistant</span><br> of Business
+                  Programming</h4>
+                <p class="text-left tag">Feb. 2023 - Jun. 2023</p>
+              </div>
+              <div class="swiper-slide client-box">
+                <h4 class="text-left title"><span class="highlightBlue">NTU Student Ambassador</span></h4>
+                <p class="text-left tag">Oct. 2022 - Jun. 2024</p>
+              </div>
+              <div class="swiper-slide client-box"></div>
+            </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next extracurricular-next"></div>
+          <div class="swiper-button-prev extracurricular-prev"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container-fluid">
+      <div class="row footer">
+        <div class="col-md-12 text-center">
+          <div class="section" id="ContactMe"></div>
+          <h1>Hsin-Yi Tsai<br><span>(Jaz)</span></h1>
+          <ul class="social-links">
+            <li><a href="mailto:jasmine921030@gmail.com"><img src="assets/email.png" alt="電子郵件"></a></li>
+            <li><a href="https://line.me/ti/p/9P0Lex_9Pi"><img src="assets/line.png" alt="Line QR code"></a></li>
+            <li class="Cicon1">
+              <a title="連絡電話"><img src="assets/phone.png" alt="連絡電話"></a>
+              <div class="CiconEX">
+                <p> <br>0988-893-660</p>
+              </div>
+            </li>
+            <li><a href="https://github.com/lemonkat2003/jaztsai92.github.io.git" alt="Github 連結"><img
+                  src="assets/github.png"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="js/jquery.counterup.min.js"></script>
+  <script>
+    // Counterup
+    $('.counter').counterUp({
+      time: 1000
+    });
+
+    // Main Navigation
+    $('#menu-toggle').click(function () {
+      $(this).toggleClass('open'),
+        $('.main-nav').toggleClass('show-it');
+    })
+  </script>
+
+
+
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/swiper.jquery.min.js"></script>
+  <script>
+    var swiper1 = new Swiper('.project-swiper', {
+      slidesPerView: 3,
+      paginationClickable: true,
+      nextButton: '.project-next',
+      prevButton: '.project-prev',
+      spaceBetween: 60,
+      // Responsive breakpoints
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: '.swiper-pagination'
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
+      }
+    });
+
+    var swiper2 = new Swiper('.extracurricular-swiper', {
+      slidesPerView: 3,
+      paginationClickable: true,
+      nextButton: '.extracurricular-next',
+      prevButton: '.extracurricular-prev',
+      spaceBetween: 60,
+      // Responsive breakpoints
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: '.swiper-pagination'
+        },
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
